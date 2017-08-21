@@ -13,7 +13,7 @@
     function create () {
       var secretFriend = {}
       return openModal(secretFriend, function saveFunction (secretFriend) {
-        return SecretFriend.create(secretFriend).then((secretFriend) => {
+        return SecretFriend.create(secretFriend).then(function (secretFriend) {
           $location.path('/secret-friend/' + secretFriend._id)
         })
       })
