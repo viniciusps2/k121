@@ -61,14 +61,14 @@ const fontsSource = [
 ]
 
 const specSource = [
-  getFullPath('tests/**/*.js')
+  getFullPath('test/**/*.js')
 ]
 
 const distFolder = getFullPath('public/_dist')
 let isDist = false
 
-const KARMA_CONF_FILE = getFullPath('tests/karma.conf.js')
-const specFolder = getFullPath('tests/')
+const KARMA_CONF_FILE = getFullPath('test/karma.conf.js')
+const specFolder = getFullPath('test/')
 const specFiles = "'./**/*spec.js'"
 
 gulp.task('serve', ['inject'], () => {
@@ -178,7 +178,7 @@ gulp.task('inject-karma', () => {
 })
 
 gulp.task('test', ['inject-karma'], function (done) {
-  // Tests
+  // Test
   const argv = require('yargs').argv
   const Server = require('karma').Server
   let singleRun = true
