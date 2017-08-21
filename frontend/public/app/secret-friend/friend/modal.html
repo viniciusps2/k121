@@ -1,0 +1,24 @@
+<form name="create-friend" ng-submit="modal.save()">
+  <div class="modal-header">
+      <h3 class="modal-title">
+          {{modal.title}}
+      </h3>
+  </div>
+  <div class="modal-body">
+      <div class="form-group">
+        <label>Nome:</label>
+        <input type="text" ng-model="modal.data.name" class="form-control" ng-required="true">
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="text" ng-model="modal.data.email" class="form-control" ng-required="true">
+      </div>
+  </div>
+
+  <div class="alert alert-danger" role="alert" ng-if="modal.errorMessage">{{modal.errorMessage}}</div>
+
+  <div class="modal-footer">
+      <button class="btn btn-primary" type="submit" ng-click="modal.save()">Salvar</button>
+      <button class="btn btn-warning" type="button" ng-click="modal.cancel()">Cancelar</button>
+  </div>
+</form>

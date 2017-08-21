@@ -1,0 +1,19 @@
+<form name="create-secret-friend" ng-submit="modal.save()">
+    <div class="modal-header">
+        <h3 class="modal-title">
+            Novo Amigo Secreto
+        </h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+          <label>Título do Amigo Secreto:</label>
+          <input type="text" ng-model="modal.data.title" class="form-control" required>
+        </div>
+    </div>
+    
+    <div class="alert alert-danger" role="alert" ng-if="modal.errorMessage">{{modal.errorMessage}}</div>
+
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" type="button" ng-click="modal.save()">Criar</button>
+    </div>
+</form>

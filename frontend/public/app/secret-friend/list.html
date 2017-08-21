@@ -1,0 +1,58 @@
+<div class="container">
+	<div class="row">
+		<h3>{{vm.title}}</h3>
+	</div>
+
+	<div class="row">
+		<button class="btn btn-primary btn-md" role="button" ng-click="vm.addFriend()">Adicionar Amigo</button>
+
+		<button class="btn btn-primary btn-md" role="button" ng-click="vm.shuffle()">Sortear</button>
+	</div>
+
+  	<hr class="my-4">
+
+	<div class="row" ng-if="vm.message.error">
+		<div class="alert alert-danger">{{vm.message.error}}</div>
+	</div>
+
+	<div class="row" ng-if="vm.message.success">
+		<div class="alert alert-success">{{vm.message.success}}</div>
+	</div>
+
+	<div class="row">
+		<div class="panel panel-default">
+		  
+
+		  <div class="panel-heading">Lista de amigos</div>
+
+		  <table class="table table-friends">
+
+		  	<tbody ng-if="!vm.friends.length">
+			  	<tr>
+			  		<td>
+						Sua lista de amigos está vazia! Convide alguns amigos.
+			  		</td>
+			  	</tr>
+		  	</tbody>
+
+		  	
+		  	<tbody ng-if="vm.friends.length">
+			  	<tr>
+			  		<th class="col-md-4">Nome</th>
+			  		<th class="col-md-4">E-mail</th>
+			  		<th></th>
+			  	</tr>	    <tr ng-repeat="friend in vm.friends">
+			      <td>{{friend.name}}</td>
+			      <td>{{friend.email}}</td>
+			      <td>
+					<button class="btn btn-success btn-md" role="button" ng-click="vm.editFriend(friend)">Editar</button>
+					<button class="btn btn-danger btn-md" role="button" ng-click="vm.removeFriend(friend)">Excluir</button>
+			      	
+			      </td>
+			    </tr>
+			  </tbody>
+		  </table>
+		</div>
+	</div>
+
+</div>

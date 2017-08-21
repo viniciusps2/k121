@@ -67,6 +67,7 @@
         }
     },
     "scripts": {
+	"start": "node index",
         "report": "nyc report --reporter=html",
         "test": "nyc ava"
     },
