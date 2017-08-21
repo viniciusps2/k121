@@ -18,24 +18,6 @@
         })
       })
     }
-    // function create () {
-    //   openNewModal().then(function (title) {
-    //     SecretFriend.create({title}).then((secretFriend) => {
-    //       $location.path('/secret-friend/' + secretFriend._id)
-    //     })
-    //   })
-    // }
-
-    // function openNewModal () {
-    //   var modalInstance = $uibModal.open({
-    //     animation: true,
-    //     templateUrl: 'app/secret-friend/create/modal.html',
-    //     controller: 'SecretFriendModalCtrl',
-    //     controllerAs: 'modal'
-    //   })
-    //   return modalInstance.result
-    // }
-
 
     function openModal (secretFriend, saveFunction) {
       var modalInstance = $uibModal.open({
