@@ -1,11 +1,12 @@
 const mongoose = require('mongoose')
+const db = require('../../lib/mongodb')
+
 const {Schema} = mongoose
-const {ObjectId} = mongoose.Types
+const {ObjectId} = Schema.Types
 
 const SecretFriend = Schema({
-  code: String,
-  responsible: ObjectId,
-  sortedAt: Date
+  title: {type: String, required: [true, 'O nome é obrigatório']},
+  shuffled: Boolean
 })
 
-module.exports = mongoose.model('SecretFriend', SecretFriend)
+module.exports = db.createModel('SecretFriend', SecretFriend)
