@@ -34,8 +34,6 @@
     return {
       create: create,
       findById: findById,
-      addFriend: addFriend,
-      friends: friends,
       shuffle: shuffle
     }
 
@@ -45,15 +43,6 @@
 
     function create (secretFriendData) {
       return resource.create(secretFriendData).$promise
-    }
-
-    function addFriend (secretFriendId, friendData) {
-      friendData.secretFriendId = secretFriendId
-      return resource.addFriend(friendData).$promise
-    }
-
-    function friends (id) {
-      return resource.friends({id: id}).$promise
     }
 
     function shuffle (id) {

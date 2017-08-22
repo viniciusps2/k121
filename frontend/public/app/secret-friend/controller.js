@@ -13,9 +13,11 @@
     vm.addFriend = addFriend
     vm.editFriend = editFriend
     vm.removeFriend = removeFriend
+    vm.listFriends = listFriends
     vm.shuffle = shuffle
+    vm.initialize = initialize
 
-    initialize(id)
+    // initialize()
 
     function listFriends () {
       return FriendService.findBySecretFriend(id).then(function (friends) {
@@ -47,7 +49,6 @@
         vm.message = {success: 'Sorteio realizado com sucesso, foi enviado um e-mail para cada um dos integrantes com a pessoa sorteada para receber o presente.'}
       })
       .catch(function (error) {
-        console.log('===============logging: error ====',error);
         vm.message = {error: error.data.message}
       })
     }

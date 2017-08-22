@@ -16,7 +16,6 @@
     function create (secretFriendId) {
       var title = "Adicionar amigo"
       var friendData = {}
-
       return openModal(title, friendData, function saveFunction (friendData) {
         return Friend.create(secretFriendId, friendData)
       })
@@ -55,6 +54,7 @@
           }
         }
       })
+
       return modalInstance.result
     }
   }
