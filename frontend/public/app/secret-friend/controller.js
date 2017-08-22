@@ -10,6 +10,7 @@
     var id = $routeParams.id
 
     vm.friends = []
+    vm.title = 'ssss'
     vm.addFriend = addFriend
     vm.editFriend = editFriend
     vm.removeFriend = removeFriend
@@ -17,7 +18,7 @@
     vm.shuffle = shuffle
     vm.initialize = initialize
 
-    // initialize()
+    initialize()
 
     function listFriends () {
       return FriendService.findBySecretFriend(id).then(function (friends) {
