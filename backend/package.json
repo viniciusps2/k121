@@ -1,27 +1,27 @@
 {
     "author": "Vinicius Sanches",
     "dependencies": {
-        "bluebird": "^3.5.0",
-        "kcors": "^2.2.1",
-        "koa": "^2.3.0",
-        "koa-bodyparser": "^4.2.0",
-        "koa-logger": "^3.0.1",
-        "koa-router": "^7.2.1",
-        "lodash": "^4.17.4",
-        "mongoose": "^4.11.7",
-        "sendgrid": "^2.0.0"
+        "bluebird": "3.5.0",
+        "kcors": "2.2.1",
+        "koa": "2.3.0",
+        "koa-bodyparser": "4.2.0",
+        "koa-logger": "3.0.1",
+        "koa-router": "7.2.1",
+        "lodash": "4.17.4",
+        "mongoose": "4.11.7",
+        "sendgrid": "2.0.0"
     },
     "description": "",
     "devDependencies": {
-        "ava": "^0.22.0",
-        "nyc": "^11.1.0",
-        "sinon": "^3.2.1",
-        "snazzy": "^7.0.0",
-        "standard": "^10.0.3",
-        "supertest": "^3.0.0"
+        "ava": "0.22.0",
+        "nyc": "11.1.0",
+        "sinon": "3.2.1",
+        "snazzy": "7.0.0",
+        "standard": "10.0.3",
+        "supertest": "3.0.0"
     },
     "engines": {
-        "node": "6.3.1"
+        "node": "8.2.1"
     },
     "license": "ISC",
     "main": "index.js",
