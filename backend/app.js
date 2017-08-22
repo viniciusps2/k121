@@ -9,6 +9,7 @@ const app = new Koa()
 }))
 
 .use(require('./lib/handle-error')())
+.use(require('./api/home/routes').routes())
 .use(require('./api/friend/routes').routes())
 .use(require('./api/secret-friend/routes').routes())
 // .use(router.allowedMethods())

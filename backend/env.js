@@ -2,6 +2,8 @@ const env = {}
 
 env.nodeEnv = process.env.NODE_ENV
 
+env.port = process.env.PORT || 3000
+
 env.prefixForTest = env.nodeEnv === 'test'
   ? Math.random().toString(16).slice(-4) + '_'
   : ''
