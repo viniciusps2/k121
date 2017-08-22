@@ -41,6 +41,7 @@ npm i && npm start
 # (outro terminal)
 cd frontend
 npm i && npm start
+```
 
 ### Práticas adotas
 
